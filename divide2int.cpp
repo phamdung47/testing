@@ -51,13 +51,13 @@ public:
                 return -2147483648;
             if (dividend == -2147483648)
                 return 2147483647;
-			return -dividend;
+	    return -dividend;
         }
         if (dividend == 0 || divisor == 0)
-			return 0;
-		if (divisor == 2147483647)
-			return (dividend == 2147483647 ? 1 : (dividend == -2147483648 ? -1 : 0));
-		if (divisor == -2147483648)
+	    return 0;
+	if (divisor == 2147483647)
+	    return (dividend == 2147483647 ? 1 : (dividend == -2147483648 ? -1 : 0));
+	if (divisor == -2147483648)
             return (dividend == -2147483648 ? 1 : (dividend == 2147483647 ? 0 : 0));
         if (divisor < 0) {
             sign = -sign;
